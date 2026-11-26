@@ -65,8 +65,10 @@ npm run build   # tsc + vite build → dist/
 
 ## Deploy
 
-Pushing to `master` deploys the static build to GitHub Pages via
-`.github/workflows/deploy.yml`.
+The static build in `dist/` is published to the `gh-pages` branch
+(`npm run build` then push `dist/` to `gh-pages`); GitHub Pages serves it
+from there. (A GitHub Actions workflow deploy needs the `workflow` OAuth
+scope, which this account's CLI token does not have yet.)
 
 ## Tech
 
